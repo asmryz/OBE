@@ -1,0 +1,48 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--mantine-color-body);
+  transition: box-shadow 150ms ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-3));
+  }
+}
+
+.scrolled {
+  box-shadow: var(--mantine-shadow-sm);
+}
+
+.stickyCol {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  background-color: var(--mantine-color-body);
+  box-shadow: 2px 0 8px -2px rgba(0, 0, 0, 0.3);
+}
+
+.stickyColHeader {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background-color: var(--mantine-color-body);
+  box-shadow: 2px 0 8px -2px rgba(0, 0, 0, 0.3);
+}
+
+.scrollContainer {
+  width: 100%;
+}
+
+.scrollContainer :global(.mantine-ScrollArea-scrollbar) {
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.scrollContainer:hover :global(.mantine-ScrollArea-scrollbar) {
+  opacity: 1;
+}
