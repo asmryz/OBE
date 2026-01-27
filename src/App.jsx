@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import './App.css'
-import NavMenu from './components/NavMenu'
-import UserMenu from './components/UserMenu'
-
-
-function App() {
-
-
-  return (
-    <>
-      <NavMenu />
-
-    </>
-  )
-}
-
-export default App
-=======
 import "./App.css";
 import { createBrowserRouter, redirect, RouterProvider } from "react-router-dom";
 import { store } from "./store";
@@ -73,10 +54,10 @@ const signOutLoader = () => {
   return redirect("/");
 };
 
-const protectedRouteLoader = () => {
-  const { signedIn } = store.getState();
-  return signedIn ? null : redirect("/");
-};
+// const protectedRouteLoader = () => {
+//   const { signedIn } = store.getState();
+//   return signedIn ? null : redirect("/");
+// };
 
 const router = createBrowserRouter([
   {
@@ -142,4 +123,3 @@ export default function App() {
 //     </Container>
 //   )
 // }
->>>>>>> bd81b53 (Init)
