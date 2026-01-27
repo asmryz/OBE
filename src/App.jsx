@@ -6,6 +6,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Posts from "./components/Posts";
 import Post from "./components/Post";
 import Layout from "./components/Layout";
+import Login from "./components/Login";
 
 const layoutLoader = async () => {
   console.log("layoutLoader");
@@ -66,7 +67,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        Component: Public,
+        Component: Login,
       },
       {
         // Component guard
