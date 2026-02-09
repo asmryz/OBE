@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {  } from 'react';
 import {
   Avatar,
   Burger,
@@ -47,7 +47,7 @@ export function Header() {
 //     image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-1.png',
 //   };
 
-const items = ''
+//const items = ''
 
 //   const items = links.map((link) => (
 //     <a
