@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {
   IconChevronDown,
+  IconChevronRight,
   IconHeart,
   IconLogout,
   IconMessage,
@@ -61,11 +62,27 @@ export default function MainMenu() {
         </Menu.Item>
         <Menu.Item
           leftSection={<IconStar size={16} color={theme.colors.yellow[6]} stroke={1.5} />}
+          rightSection={<IconChevronRight size={14} stroke={1.5} />}
+          closeMenuOnClick={false}
         >
-          Saved posts
+          <Menu
+            trigger="hover"
+            position="right-start"
+            offset={45}
+            withinPortal
+          >
+            <Menu.Target>
+              <div>Courses</div>
+            </Menu.Target>
+            <Menu.Dropdown>
+              <Menu.Item>Fundamentals of Programming</Menu.Item>
+              <Menu.Item>Introduction to Computer Science</Menu.Item>
+            </Menu.Dropdown>
+          </Menu>
         </Menu.Item>
         <Menu.Item
           leftSection={<IconMessage size={16} color={theme.colors.blue[6]} stroke={1.5} />}
+          disabled
         >
           Your comments
         </Menu.Item>

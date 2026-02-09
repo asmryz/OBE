@@ -14,9 +14,15 @@
   padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
   border-radius: var(--mantine-radius-sm);
   transition: background-color 100ms ease;
+  outline: none;
 
   &:hover {
     background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-8));
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
   }
 
   @media (max-width: 36em) {

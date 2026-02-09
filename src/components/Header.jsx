@@ -9,7 +9,7 @@ import {
   Tabs,
   Text,
   UnstyledButton,
-  useMantineTheme,
+  //useMantineTheme,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '@mantinex/mantine-logo';
@@ -24,43 +24,45 @@ import {
   IconPlayerPause,
   IconTrash,
 } from '@tabler/icons-react';
-import cx from 'clsx';
+//import cx from 'clsx';
 import classes from './Header.module.css';
 import MainMenu from './MainMenu';
 
-const links = [
-  { link: '/about', label: 'Features' },
-  { link: '/pricing', label: 'Pricing' },
-  { link: '/learn', label: 'Learn' },
-  { link: '/community', label: 'Community' },
-];
+// const links = [
+//   { link: '/courses', label: 'Courses' },
+// //   { link: '/pricing', label: 'Pricing' },
+// //   { link: '/learn', label: 'Learn' },
+// //   { link: '/community', label: 'Community' },
+// ];
 
 export function Header() {
-  const theme = useMantineTheme();
+  //const theme = useMantineTheme();
   const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
-  const [userMenuOpened, setUserMenuOpened] = useState(false);
+  //const [active, setActive] = useState(links[0].link);
+  //const [userMenuOpened, setUserMenuOpened] = useState(false);
 
   // Mock user data - replace with actual user data from your auth system
-  const user = {
-    name: 'John Doe',
-    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-1.png',
-  };
+//   const user = {
+//     name: 'John Doe',
+//     image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-1.png',
+//   };
 
-  const items = links.map((link) => (
-    <a
-      key={link.label}
-      href={link.link}
-      className={classes.link}
-      data-active={active === link.link || undefined}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(link.link);
-      }}
-    >
-      {link.label}
-    </a>
-  ));
+const items = ''
+
+//   const items = links.map((link) => (
+//     <a
+//       key={link.label}
+//       href={link.link}
+//       className={classes.link}
+//       data-active={active === link.link || undefined}
+//       onClick={(event) => {
+//         event.preventDefault();
+//         setActive(link.link);
+//       }}
+//     >
+//       {link.label}
+//     </a>
+//   ));
 
   return (
     <header className={classes.header}>
