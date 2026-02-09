@@ -67,14 +67,14 @@ const items = ''
   return (
     <header className={classes.header}>
       <Container size="xl" className={classes.inner}>
-        <Group justify="space-around" style={{ width: '100%' }}>
+        <Group justify="space-between" style={{ width: '100%' }}>
           <Group gap={5}>
             <MantineLogo size={28} />
           </Group>
 
-          <Group gap={5} visibleFrom="xs">
+          {/* <Group gap={5} visibleFrom="xs">
             {items}
-          </Group>
+          </Group> */}
 
           <Group gap={5}>
             <MainMenu visibleFrom="xs" />
