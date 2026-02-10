@@ -7,6 +7,7 @@ import Posts from "./components/Posts";
 import Post from "./components/Post";
 import Layout from "./components/Layout";
 import Login from "./components/Login";
+import { Create } from "./components/Create";
 
 const layoutLoader = async () => {
   console.log("layoutLoader");
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         Component: Login,
+      },
+      {
+        path: "/create",
+        Component: Create,
       },
       {
         // Component guard
