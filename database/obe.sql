@@ -2,6 +2,7 @@
 -- PostgreSQL database dump
 --
 
+DROP DATABASE IF EXISTS obe;
 CREATE DATABASE obe;
 \connect obe
 

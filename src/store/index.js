@@ -17,4 +17,9 @@ export const store = createStore()(persist(
   }
 ));
 
+// Subscribe to all state changes
+store.subscribe((state) => {
+  console.log(state);
+});
+
 export const useStore = createUseStore(store);

@@ -12,8 +12,12 @@ import {
 } from '@mantine/core';
 import classes from './Login.module.css';
 import { notifications } from '@mantine/notifications';
+import { useStore, store } from '../store';
+// import { use } from 'react';
 
 export default function Login() {
+    const { signedIn } = useStore();
+    // const signedIn = useStore((state) => state.signedIn);
     return (
         <Container size={420} my={40}>
             {/* <Title ta="center" className={classes.title}>
@@ -34,11 +38,13 @@ export default function Login() {
                     </Anchor>
                 </Group>
                 <Button fullWidth mt="xl" radius="md" 
-                onClick={() => notifications.show({
+                onClick={() => {
+                    store.setState({ signedIn: !signedIn });
+                    notifications.show({
                     title: 'Default notification',
                     message: 'Do not forget to star Mantine on GitHub! 🌟',
                     position: 'bottom-center',
-                })}>
+                })}}>
                     Sign in
                 </Button>
             </Paper>

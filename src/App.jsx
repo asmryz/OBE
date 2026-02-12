@@ -10,8 +10,9 @@ import Login from "./components/Login";
 import { Create } from "./components/Create";
 
 const layoutLoader = async () => {
-  console.log("layoutLoader");
-  const { initialized } = store.getState();
+  //console.log("layoutLoader");
+  console.log(store.getState());
+  const { initialized  } = store.getState();
   if (!initialized) {
     console.log("initialize app");
     await new Promise((r) => setTimeout(r, 2000));
@@ -107,7 +108,7 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  console.log("App");
+  //console.log("App");
   return <RouterProvider router={router} fallbackElement={<p>Loading…</p>} />;
 }
 
